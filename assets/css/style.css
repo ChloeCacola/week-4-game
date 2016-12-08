@@ -1,0 +1,43 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	font-size: 65px;
+}
+
+#mainNumber {
+	font-size: 40px;
+	
+}
+
+
+
+#currentScore {
+	font-size: 40px;
+}
+
+#currentText {
+	text-decoration: underline;
+}
+
+#crystal1 {
+	height: 100px;
+	width: 100px;
+}
+
+#crystal2 {
+	height: 100px;
+	width: 100px;
+}
+
+#crystal3 {
+	height: 100px;
+	width: 100px;
+}
+
+#crystal4 {
+	height: 80px;
+	width: 80px;
+}
+
