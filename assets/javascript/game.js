@@ -18,7 +18,8 @@ var crystal1 = Math.floor(Math.random() * (12 - 1 +1) + 1);
 var crystal2 = Math.floor(Math.random() * (12 - 1 +1) + 1);
 var crystal3 = Math.floor(Math.random() * (12 - 1 +1) + 1);
 var crystal4 = Math.floor(Math.random() * (12 - 1 +1) + 1);
-var currentScore = 0
+var currentScore = 0;
+var result
 var wins = 0;
 var losses = 0;
 
@@ -40,11 +41,8 @@ var startGame = function() {
 }
 
 var win = function() {
-	if(currentScore === mainNumber) {
 		wins = wins + 1
-		console.log(wins);
 		$("#wins").html(wins);
-	};
 	
 };
 
@@ -53,59 +51,72 @@ var lost = function() {
 		$("#losses").html(losses);
 }
 
+
+
 startGame();
 
-
     $("#crystal1").on("click",function() {
-      var result = currentScore + crystal1
+      result = currentScore + crystal1
       currentScore = result
       $("#currentScore").html(currentScore);
       console.log(crystal1);
-        if (currentScore === mainNumber) {
+      if (currentScore === mainNumber) {
       	startGame();
       	win();
       }
-      if (currentScore > mainNumber) {
+      else if (currentScore > mainNumber) {
 	     startGame();
 	     lost();
-	    };
+	    }
+	  else {};
 
     });
 
     $("#crystal2").on("click",function() {
-       var result = currentScore + crystal2
+       result = currentScore + crystal2
        currentScore = result
        $("#currentScore").html(currentScore)
       console.log(crystal2);
-      win();
-	    if (currentScore > mainNumber) {
-	    	lost();
-	      	startGame();
-	    };
+      if (currentScore === mainNumber) {
+      	startGame();
+      	win();
+      }
+      else if (currentScore > mainNumber) {
+	     startGame();
+	     lost();
+	    }
+	  else {};
     })      
 
     $("#crystal3").on("click",function() {
-       var result = currentScore + crystal3
+       result = currentScore + crystal3
        currentScore = result
        $("#currentScore").html(currentScore)
       console.log(crystal3);
-      win();
-	    if (currentScore > mainNumber) {
-	    	lost();
-	      	startGame();
-	    };      
+      if (currentScore === mainNumber) {
+      	startGame();
+      	win();
+      }
+      else if (currentScore > mainNumber) {
+	     startGame();
+	     lost();
+	    }
+	  else {};   
     })
 
     $("#crystal4").on("click",function() {
-       var result = currentScore + crystal4
+       result = currentScore + crystal4
        currentScore = result
        $("#currentScore").html(currentScore)
       console.log(crystal4);
-      win();
-	    if (currentScore > mainNumber) {
-	    	lost();
-	      	startGame();
-	    };
+      if (currentScore === mainNumber) {
+      	startGame();
+      	win();
+      }
+      else if (currentScore > mainNumber) {
+	     startGame();
+	     lost();
+	    }
+	  else {};
     })
-
  
